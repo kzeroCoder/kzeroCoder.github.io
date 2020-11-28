@@ -72,7 +72,7 @@ $$
 
 - 分类
 
-  <img src="D:/学习&素材/机器学习/机器学习复习笔记.assets/image-20201116172444865.png" alt="image-20201116172444865" style="zoom:50%;" />
+  <img src="/assets/img/machineLearning/machineLearningCh4/image-20201116172444865.png" alt="image-20201116172444865" style="zoom:50%;" />
 
   
 
