@@ -1,5 +1,5 @@
 ---
-title: 机器学习笔记(一)——简介与决策树
+title: 机器学习笔记(一)
 author: Kzero Coder
 date: 2020-10-10 15:29:00 +0800
 categorise: [Blogging, Machine Learning]
@@ -28,7 +28,7 @@ tage: [writing]
 
 机器学习是**寻找一种对自然/人工主题、现象或活动可预测且/或可执行的及其理解方法。**
 
-<img src="/assets/img/machineLearning/1.png" alt="image-20201013160916540" />
+<img src="/assets/img/machineLearning/machineLearningCh1/1.png" alt="image-20201013160916540" />
 
 
 
@@ -109,7 +109,7 @@ Main loop:
 
 - 最理想情况是每个子集“皆为正例”或“皆为反例”，需要对结点混乱度(impurity)进行测量
 
-<img src="/assets/img/machineLearning/2.png" alt="image-20201013160916540" style="zoom:150%"/>
+<img src="/assets/img/machineLearning/machineLearningCh1/2.png" alt="image-20201013160916540" style="zoom:150%"/>
 
 ##### **熵(Entropy)**
 
@@ -156,7 +156,7 @@ $$
   $$
   
   
-  <img src="/assets/img/machineLearning/3.png" alt="image-20201013160916540" style="zoom:150%"/>
+  <img src="/assets/img/machineLearning/machineLearningCh1/3.png" alt="image-20201013160916540" style="zoom:150%"/>
 
 ##### **信息增益**
 
@@ -174,6 +174,23 @@ $$
 用于测量由于切分带来的熵减少量，选择具有最大减少量的切分(即最大增益)
 
 **缺点**：倾向于选择具有分支多的属性，因为每份样本可以很少，但很纯
+
+
+
+##### 补充
+
+- **交叉熵**
+
+$$
+H(p,q)=-\sum_{i=1}^{n}p(x_i)\log q(x_i)
+$$
+
+- **相对熵/KL散度**
+  $$
+  KL(p||q)=-H(q)+H(p,q)=\sum_{i=1}^{n}p(x_i)\log p(x_i)-\sum_{i=1}^{n}p(x_i)\log q(x_i)=\sum_{i=1}^{n}p(x_i)\log (p(x_i)/q(x_i))
+  $$
+
+
 
 ### 树归纳的停止准则
 
@@ -196,7 +213,7 @@ $$
 
 #### **最小描述长度准则(Minimum Description Length)**
 
-<img src="/assets/img/machineLearning/4.png" alt="image-20201013160916540"/>
+<img src="/assets/img/machineLearning/machineLearningCh1/4.png" alt="image-20201013160916540"/>
 
 Cost(Model)为模型花费，Cost(Data\|Model)为不符合模型、需要另发的数据所需花费。
 
@@ -216,13 +233,13 @@ Cost(Model)为模型花费，Cost(Data\|Model)为不符合模型、需要另发�
 
 ### 对于确实属性值的处理
 
-<img src="/assets/img/machineLearning/5.png" alt="image-20201013160916540" style="zoom:80%"/><img src="/assets/img/machineLearning/6.png" alt="image-20201013160916540"/>
+<img src="/assets/img/machineLearning/machineLearningCh1/5.png" alt="image-20201013160916540" style="zoom:80%"/><img src="/assets/img/machineLearning/machineLearningCh1/6.png" alt="image-20201013160916540"/>
 
 通过其他数据属性的概率设置该项概率。
 
 **对于后续加入的数据：**
 
-<img src="/assets/img/machineLearning/7.png" alt="image-20201013160916540" style="zoom:150%"/>
+<img src="/assets/img/machineLearning/machineLearningCh1/7.png" alt="image-20201013160916540" style="zoom:150%"/>
 
 ## 曲线拟合
 
@@ -252,12 +269,13 @@ E(w)=\frac{1}{2}\left\{y(x_n,w)-t_n\right\}^2
 
 
 - **拟合优度评价**
-  $$
-  E_{RMS}=\sqrt{2E(w^*)/N}
 $$
-  
-<img src="/assets/img/machineLearning/8.png" alt="image-20201013160916540" style="zoom:150%"/>
-  
+E_{RMS}=\sqrt{2E(w^*)/N}
+$$
+
+
+<img src="/assets/img/machineLearning/machineLearningCh1/8.png" alt="image-20201013160916540" style="zoom:150%"/>
+
 - **阶数高明显过拟合**
 
 ### 加入惩罚项抑制过拟合
@@ -269,5 +287,5 @@ $$
 
 惩罚项比重大时降低模型复杂度，比重小时退化成原型。
 
-<img src="/assets/img/machineLearning/9.png" alt="image-20201013160916540" style="zoom:150%"/>
+<img src="/assets/img/machineLearning/machineLearningCh1/9.png" alt="image-20201013160916540" style="zoom:150%"/>
 
