@@ -2,8 +2,9 @@
 title: 机器学习笔记(四)
 author: Kzero Coder
 date: 2020-11-04 18:00:00 +0800
-categorise: [Blogging, Machine Learning]
-tage: [writing]
+categories: [Blogging, Machine Learning]
+tags: [writing]
+math: true
 ---
 <head>
     <script type="text/x-mathjax-config"> 

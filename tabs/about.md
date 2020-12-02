@@ -8,4 +8,5 @@ title: About
 # MIT License
 ---
 
-> **Note**: Add Markdown syntax content to file `tabs/about.md` and it will show up on this page.
+> It's just a blog site of a student  from [St.Majiagou Men's Vocational and Technical School](http://www.hit.edu.cn/). I use this site to take down some class notes. If you have any questions, you can write to <font color="blue"><u>chen_sans@qq.com</u></font> so that I can easily block you :)
+
