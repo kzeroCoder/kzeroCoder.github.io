@@ -16,4 +16,5 @@ Gemfile.lock
 # bundle cache
 vendor
 
-
+# for some reason, running locally should add require 'em/pure_ruby' in Gemfile, but shouldn't on github pages. hum.....
+Gemfile
