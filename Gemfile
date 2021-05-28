@@ -1,5 +1,7 @@
 source "https://rubygems.org"
 
+gem "github-pages"
+
 gem "jekyll", ">=3.8.6"
 
 # Official Plugins
@@ -10,6 +12,7 @@ group :jekyll_plugins do
   gem "tzinfo"
   gem 'tzinfo-data'
   gem 'wdm', '>= 0.1.0' if Gem.win_platform?
+  require 'em/pure_ruby'
 end
 
 group :test do

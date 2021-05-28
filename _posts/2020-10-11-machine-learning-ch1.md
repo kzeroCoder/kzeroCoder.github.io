@@ -264,7 +264,7 @@ Cost(Model)为模型花费，Cost(Data\|Model)为不符合模型、需要另发�
   
   
   $$
-E(w)=\frac{1}{2}\left\{y(x_n,w)-t_n\right\}^2
+  E(w)=\frac{1}{2}\left\{y(x_n,w)-t_n\right\}^2
   $$
 
 
