@@ -2,12 +2,12 @@ source "https://rubygems.org"
 
 gem "jekyll-theme-chirpy", "~> 4.0", ">= 4.0.1"
 
-# group :jekyll_plugins do
-#  gem 'jekyll-archives'
-#  gem 'jekyll-assets'
-#  gem 'jekyll-paginate'
-#  gem 'jekyll-sitemap'
-# end
+group :jekyll_plugins do
+ gem 'jekyll-archives'
+ gem 'jekyll-assets'
+ gem 'jekyll-paginate'
+ gem 'jekyll-sitemap'
+end
 
 group :test do
   gem "html-proofer", "~> 3.18"
