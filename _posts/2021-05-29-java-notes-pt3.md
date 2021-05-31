@@ -35,17 +35,19 @@ StringBuilder实质上是一个CharSequence，即字符数组char[]
 
 根据对父类AbstractStringBuilder方法的查看
 
-```Java
+```java
+abstract class AbstractStringBuilder implements Appendable, CharSequence {
+    ...
+        
 	/**
      * For positive values of {@code minimumCapacity}, this method
      * behaves like {@code ensureCapacity}, however it is never
      * synchronized.
      * If {@code minimumCapacity} is non positive due to numeric
      * overflow, this method throws {@code OutOfMemoryError}.
+     * 对于正数值minimumCapacity，这个方法和ensureCapacity一致，但是永远不会同步。
+     * 如果minimumCapacity由于溢出而非正，则该方法抛出OutOfMemoryError
      */
-	/** 对于正数值minimumCapacity，这个方法和ensureCapacity一致，但是永远不会同步。
-	 * 如果minimumCapacity由于溢出而非正，则该方法抛出OutOfMemoryError
-	 */
     private void ensureCapacityInternal(int minimumCapacity) {
         // overflow-conscious code
         if (minimumCapacity - value.length > 0) {
@@ -54,16 +56,16 @@ StringBuilder实质上是一个CharSequence，即字符数组char[]
         }
     }
 
-/**
+    /**
      * The maximum size of array to allocate (unless necessary).
      * Some VMs reserve some header words in an array.
      * Attempts to allocate larger arrays may result in
      * OutOfMemoryError: Requested array size exceeds VM limit
      */
-	// 数组分配的最大值
+    // 数组分配的最大值
     private static final int MAX_ARRAY_SIZE = Integer.MAX_VALUE - 8;
 
-/**
+    /**
      * Appends the specified string to this character sequence.
      * <p>
      * The characters of the {@code String} argument are appended, in
@@ -81,7 +83,7 @@ StringBuilder实质上是一个CharSequence，即字符数组char[]
      * @param   str   a string.
      * @return  a reference to this object.
      */
-	// 添加特定字符串到这个字符序列中
+    // 添加特定字符串到这个字符序列中
     public AbstractStringBuilder append(String str) {
         if (str == null)
             return appendNull();
@@ -121,6 +123,9 @@ StringBuilder实质上是一个CharSequence，即字符数组char[]
         }
         return this;
     }
+    
+    ...
+}
 ```
 
 其最大数组大小为`Integer.MAX_VALUE-8`，其大部分对数组的操作都是通过数组复制进行的
@@ -302,5 +307,4 @@ public interface Comparator<T> {
  * equals比较Comparator的等价性，不求对任意一组对象返回值的完全相等，而是求符号相等即可
 */
 ```
-
 
