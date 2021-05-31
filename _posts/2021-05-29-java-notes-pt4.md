@@ -49,7 +49,6 @@ int i = arrayRefVar.length	//注意数组的length是一个属性，但是String
 dataType[][] arrayRefVar;
 
 //创建数组和一维数组类似
-int[][] arrayTest = {{0,1}, {0,1,2}};	//注意arrayTest[0].length=2, arrayTest[1].length=3，不是相同的
 
 //数组长度
 int i = arrayTest.length;	//获取的是一维数组的数量，即第一维的个数
@@ -865,6 +864,6 @@ int j = arrayTest[0].length;	//获取的是第一个一维数组的长度，以d
 
 8. 递归排序第一二三部分
 
-![img](2021-05-29-java-notes-pt4.assets/20140118232211015)
+![img](/assets/img/javaNotes/20140118232211015.jpg)
 
 *注：双轴排序源自https://blog.csdn.net/xjyzxx/article/details/18465661*
